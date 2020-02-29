@@ -22,27 +22,13 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     animationController = AnimationController(
       duration: Duration(seconds: 1),
       vsync: this,
-//      upperBound: 100
     );
-
-//    animation = CurvedAnimation(parent: animationController, curve: Curves.easeIn);
     animation = ColorTween(begin: Colors.blueGrey, end: Colors.white)
         .animate(animationController);
-//    animationController.reverse(from: 1);
     animationController.forward();
-
-//    animation.addStatusListener((status) {
-//      print(status);
-//      if(status == AnimationStatus.completed) {
-//        animationController.reverse(from: 1.0);
-//      } else if (status ==AnimationStatus.dismissed){
-//        animationController.forward();
-//      }
-//    });
-
     animationController.addListener(() {
       setState(() {});
-      print(animation.value);
+//      print(animation.value);
     });
   }
 
